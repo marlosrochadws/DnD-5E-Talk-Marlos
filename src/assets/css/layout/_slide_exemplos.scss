@@ -1,0 +1,389 @@
+.image-BG-right {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  right: 0%;
+  top: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  img {
+
+  }
+}
+
+.close-popup {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-family: "Optialthea";
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.popup-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #181f20;
+  opacity: .8;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity .5s ease-in-out;
+  pointer-events: none;
+
+  &.active {
+    opacity: .8;
+    pointer-events: all;
+  }
+}
+
+.popup-test {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  transform: scale(0.7);
+
+  @include for-lg-desktop-up {
+    transform: scale(1);
+  }
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+
+    .player-wrapper {
+      opacity: 1;
+      top: 50%;
+    }
+
+    .enemy-wrapper.active {
+      opacity: 1;
+      top: 50%;
+      max-width: 700px;
+    }
+  }
+
+  .enemy-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+    max-width: 0px;
+    height: min-content;
+    top: 150%;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity .5s ease-in-out, top .5s ease-in-out;
+
+    .test-wrapper {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      grid-gap: 10px;
+      min-width: 135px;
+      margin-top: 20px;
+
+      &.active {
+        display: flex;
+      }
+
+      .test-icon {
+        width: 60px;
+        height: 60px;
+
+        img {
+          width: 60px;
+          height: 60px;
+          object-fit: contain;
+          filter: invert(1);
+        }
+      }
+      .test-label {
+        font-family: "Optialthea";
+        text-transform: uppercase;
+        font-size: 20px;
+      }
+      .test-value {
+        font-family: "Optialthea";
+        width: 100%;
+        height: 65px;
+        border: 2px solid #d8b891;
+        font-size: 2em;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .player-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+    height: min-content;
+    top: 150%;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: all .5s ease-in-out;
+  }
+
+  .arabesco-bottom,
+  .arabesco-top {
+    position: absolute;
+    width: 700px;
+    background-image: url('/assets/images/FRAME.svg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 700px 155px;
+    z-index: -1;
+    
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: 21.6%;
+    }
+  }
+
+  .arabesco-top {
+    bottom: 100%;
+    margin-bottom: -1px;
+  }
+
+  .arabesco-bottom {
+    top: 100%;
+    margin-top: -1px;
+    transform: rotateX(-180deg) translateX(0px);
+  }
+
+  .char-wrapper {
+    position: relative;
+    width: 359px;
+    margin-left: -1px;
+    background-image: linear-gradient(0deg,#2b4c54,#447b88, #2b4c54);
+    border-left: 3px solid #d8b891;
+    border-right: 3px solid #d8b891;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+
+
+    .char-circle {
+      .image-circle {
+        position: relative;
+        width: 200px;
+        height: auto;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 100% 100%;
+        margin-top: -150px;
+        border: 6px solid #d8b891;
+    
+        &:after {
+          content:'';
+          display: block;
+          padding-bottom: 100%;
+        }
+
+        &[data-player-pic="normal"] {
+          background-image: url('/assets/images/menina_2.png');
+        }
+        &[data-player-pic="feliz"] {
+          background-image: url('/assets/images/menina_3.png');
+        }
+        &[data-player-pic="trizte"] {
+          background-image: url('/assets/images/menina_4.png');
+        }
+        &[data-enemy-pic="normal"] {
+          background-image: url('/assets/images/HOMEM_3.png');
+        }
+        &[data-enemy-pic="feliz"] {
+          background-image: url('/assets/images/HOMEM_1.png');
+        }
+        &[data-enemy-pic="trizte"] {
+          background-image: url('/assets/images/HOMEM_2.png');
+        }
+      }
+    }
+
+    .char-values {
+      margin: 20px 0 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      grid-gap: 10px;
+
+      .plus-sign {
+        font-size: 40px;
+        color: #d8b891;
+        font-weight: 600;
+        margin-top: auto;
+        margin-bottom: 10px;
+      }
+
+      .char-att {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        grid-gap: 10px;
+        min-width: 135px;
+
+        &.active {
+          display: flex;
+        }
+
+        .att-icon {
+          width: 60px;
+          height: 60px;
+          img,svg {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            filter: invert(1);
+          }
+        }
+        .att-label {
+          font-family: "Optialthea";
+          text-transform: uppercase;
+          font-size: 20px;
+        }
+        .att-value {
+          font-family: "Optialthea";
+          width: 100%;
+          height: 65px;
+          border: 2px solid #d8b891;
+          font-size: 2em;
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .test-difficulty {
+      margin: 20px auto 0px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      grid-gap: 15px;
+      width: 100%;
+
+      &.active {
+        display: flex;
+      }
+
+      .test-difficulty-label {
+        font-family: "Optialthea";
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .test-difficulty-class {
+        font-family: "Optialthea";
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 600;
+      }
+    }
+
+    .test-result {
+      position: relative;
+      padding: 55px 0 0px;
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+      min-height: 190px;
+
+      &.active {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: -2px;
+        width: 200px;
+        height: 50px;
+        background-image: url('/assets/images/FRAME1.svg');
+        background-position: center center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        filter: brightness(1.5);
+      }
+      &::after {
+        content: '';
+        position: relative;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 5px;
+        margin-left: -2px;
+        width: 200px;
+        height: 28px;
+        background-image: url('/assets/images/FRAME2.svg');
+        background-position: center center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        filter: brightness(1.5);
+      }
+
+      .result-value {
+        font-family: "Optialthea";
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 600;
+      }
+
+      .result {
+        display: none;
+        font-family: "Optialthea";
+        text-transform: uppercase;
+        font-size: 30px;
+        font-weight: 600;
+
+        &[data-critical-failure] {color: #ff6666; text-shadow: 2px 2px #6b1f1f, -1px 0px #6b1f1f;}
+        &[data-failure] {color: #ff6666; text-shadow: 2px 2px #6b1f1f, -1px 0px #6b1f1f;;}
+        &[data-success] {color: #ffaf55; text-shadow: 2px 2px #775938, -1px 0px #775938;}
+        &[data-critical-success] {color: #ffaf55; text-shadow: 2px 2px #775938, -1px 0px #775938;}
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}
+

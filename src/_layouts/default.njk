@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include '_head_base.njk' %}
+
+<body class="{{ pagename }}">
+    
+  {% include 'site_header.njk' %}
+    
+  <main id="content" class="content">
+    
+    {# {{content | safe}} #}
+
+    {% include "site_index.njk" %}
+    
+  </main>
+
+  {% include 'site_footer.njk' %}
+  {% include '_script_base.njk' %}
+
+</body>
+</html>

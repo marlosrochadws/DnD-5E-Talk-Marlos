@@ -1,0 +1,77 @@
+  <button data-throw-btn class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" v-on:click="throw_dice">ROLL DICE!</button>
+  <div class="flex-auto text-center flex justify-center items-center"> {% raw %}{{result}}{% endraw %} </div>
+
+
+<form id="smartyForm">
+  <input type="hidden" name="action" value="charter-service-check" />
+  <input type="hidden" name="csrf_token" value="\{{csrf_token}}" />
+  <div class="smarty_address"></div>
+  <div class="smarty_unit"></div>
+  <div class="smarty_zip"></div>
+</form>
+
+
+<form id="smartyForm" data-ss-lookup data-bh-form>
+  <input type="hidden" name="action" value="charter-service-check" />
+  <input type="hidden" name="csrf_token" value="\{{csrf_token}}" />
+  <div class="smarty_address">
+    <input
+      type="text"
+      name="street"
+      autocomplete="off"
+      required
+      data-ss-address
+    />
+    <label>*Street Address</label>
+    <div class="error-msg">Please verify your address</div>
+  </div>
+  <div class="smarty_unit">
+    <input
+      type="text"
+      name="unit"
+      autocomplete="off"
+      data-ss-secondary
+    />
+    <label>Apt/Unit</label>
+  </div>
+  <div class="smarty_zip">
+    <input
+      type="text"
+      name="zipcode"
+      autocomplete="off"
+      required
+      data-ss-zip
+    />
+    <label>*Zip code</label>
+    <div class="error-msg">Invalid zipcode</div>
+  </div>
+</form>
+
+
+
+//// JS
+
+import Smarty, { Street, Unit, Zip } from 'node_modules/smartystreets';
+
+var smarty = new Smarty("#smartyForm", {
+  street: {
+    el: ".smarty_address",
+    label: "*Street Address",
+    errormsg: "Please verify your address",
+    required: true,
+    autocomplete: false,
+  },
+  unit: {
+    el: ".smarty_unit",
+    label: "Apto/Unit",
+    required: false,
+    autocomplete: false,
+  },
+  zip: {
+    el: ".smarty_zip",
+    label: "*Zip code",
+    errormsg: "Invalid zipcode",
+    required: true,
+    autocomplete: false,
+  }
+});

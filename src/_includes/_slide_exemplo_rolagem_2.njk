@@ -1,0 +1,119 @@
+<div class="swiper-slide activated-by-key">
+  
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>"O</span>
+        <span>que</span>
+        <span>você</span>
+        <span>deseja</span>
+        <span>fazer?"</span>
+      </h1>
+      <div class="fade-up-text text-small">
+        <ul>
+          <li>"Quero <b>observar</b> bem o local, talvez ele não esteja sozinho." <span data-popup-roll="perception">[<b>PERCEPÇÃO</b>]</span></li>
+          <li>"Vou esconder uma <b>armadilha de urso</b> no caminho dele." <span data-popup-roll="survival">[<b>SOBREVIVÊNCIA</b>]</span></li>
+          <li>"Não quero arriscar, vou tentar passar <b>furtivamente</b>." <span data-popup-roll="stealth">[<b>FURTIVIDADE</b>]</span></li>
+          <li>"Quero a recompensa! Vou <b>atacar</b> com meu <b>arco e flecha</b>!" <span data-popup-roll="attack">[<b>ATAQUE</b>]+</span><span data-popup-roll="damage">[<b>DANO</b>]</span></li>
+          <li>"Eu vou lá <b>falar</b> com ele!"</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <img src="/assets/images/bgcastle.png">
+    </div>
+  </div>
+
+  <div class='popup-overlay'></div>
+  <div class='popup-test'>
+    <div class='close-popup' data-close-popup>×</div>
+    <div class='player-wrapper'>
+      <div class='arabesco-top'></div>
+      <div class='char-wrapper'>
+        <div class="char-circle">
+          <div class='image-circle' data-player-pic="normal"></div>
+        </div>
+
+        <div class="test-difficulty">  {# active #}
+          <div class="test-difficulty-label" data-difficulty-label>Classe de Dificuldade</div>
+          <div class="test-difficulty-class" data-difficulty-class>10</div>
+        </div>
+
+        <div class="char-values">
+          <div class="char-att" data-roll="perception"> {# active #}
+            <div class="att-icon"><img src="/assets/images/eye_1.svg"></div>
+            <div class="att-label">Percepção</div>
+            <div class="att-value" data-bonus>4</div>
+          </div>
+          <div class="char-att" data-roll="survival"> {# active #}
+            <div class="att-icon"><img src="/assets/images/Torch.svg"></div>
+            <div class="att-label">Sobrevivência</div>
+            <div class="att-value" data-bonus>3</div>
+          </div>
+          <div class="char-att" data-roll="stealth"> {# active #}
+            <div class="att-icon"><img src="/assets/images/eye_2.svg"></div>
+            <div class="att-label">Furtividade</div>
+            <div class="att-value" data-bonus>5</div>
+          </div>
+          <div class="char-att" data-roll="attack"> {# active #}
+            <div class="att-icon"><img src="/assets/images/Target.svg"></div>
+            <div class="att-label">Ataque</div>
+            <div class="att-value" data-bonus>5</div>
+          </div>
+          <div class="char-att" data-roll="damage"> {# active #}
+            <div class="att-icon"><img src="/assets/images/Bow.svg"></div>
+            <div class="att-label">Bônus de Dano</div>
+            <div class="att-value" data-bonus>5</div>
+          </div>
+          <div class="plus-sign">+</div>
+          <div class="char-att" data-roll="d8"> {# active #}
+            <div class="att-icon" data-throw-btn v-on:click="throw_dice(['d8'])"><img src="/assets/images/d8.svg"></div>
+            <div class="att-label">D8</div>
+            <div class="att-value" data-throw-result>{% raw %}{{result}}{% endraw %}</div>
+          </div>
+          <div class="char-att" data-roll="d20"> {# active #}
+            <div class="att-icon" data-throw-btn v-on:click="throw_dice(['d20'])"><img src="/assets/images/d20.svg"></div>
+            <div class="att-label">D20</div>
+            <div class="att-value" data-throw-result>{% raw %}{{result}}{% endraw %}</div>
+          </div>
+        </div>
+
+        <div class="test-result"> {# active #}
+          <div class="result-value" data-result-value></div>
+          <div class="result" data-critical-failure>Falha Crítica</div> {# active #}
+          <div class="result" data-failure>Falhou</div> {# active #}
+          <div class="result" data-success>Sucesso</div> {# active #}
+          <div class="result" data-critical-success>Sucesso Crítico</div> {# active #}
+        </div>
+      </div>
+      <div class='arabesco-bottom'></div>
+    </div>
+
+    <div class='enemy-wrapper'>
+      <div class='arabesco-top'></div>
+      <div class='char-wrapper'>
+        <div class="char-circle">
+          <div class='image-circle' data-enemy-pic="normal"></div>
+        </div>
+
+        <div class="test-wrapper test-saving">  {# active #}
+          <div class="test-icon"><img src="/assets/images/eye_1.svg"></div>
+          <div class="test-label">Percepção Passiva</div>
+          <div class="test-value" data-saving-throw>12</div>
+        </div>
+
+        <div class="test-wrapper test-armor">  {# active #}
+          <div class="test-icon"><img src="/assets/images/ShieldAC.svg"></div>
+          <div class="test-label">Classe de Armadura</div>
+          <div class="test-value" data-armor-class>14</div>
+        </div>
+
+      </div>
+      <div class='arabesco-bottom'></div>
+    </div>
+  </div>
+
+</div>

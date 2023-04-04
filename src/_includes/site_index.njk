@@ -1,0 +1,79 @@
+<div id="app" class="swiper mainSwiper background-paper">
+    <div class="dice-menu">
+        <div class="toggle-menu" id="diceMenuTg">DICES</div>
+        <div class="dices-wrapper" id="dicesWrapper">
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d4'])"><img src="/assets/images/d4.svg"><span>D4</span></div>
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d6'])"><img src="/assets/images/d6.svg"><span>D6</span></div>
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d8'])"><img src="/assets/images/d8.svg"><span>D8</span></div>
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d10'])"><img src="/assets/images/d10.svg"><span>D10</span></div>
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d12'])"><img src="/assets/images/d12.svg"><span>D12</span></div>
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d20'])"><img src="/assets/images/d20.svg"><span>D20</span></div>
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d4','d6','d8','d10','d12','d20'])"><span>ALL</span></div>
+        </div>
+    </div>
+    <div class="swiper-wrapper">
+        
+        
+        {% include "_slide_cover.njk" %}
+        {% include "_slide_autor.njk" %}
+        {% include "_slide_o_desafio.njk" %}
+        {% include "_slide_disclaimer.njk" %}
+        {% include "_slide_a_sigla.njk" %}
+        {% include "_slide_rpg_eletronicos.njk" %}
+        {% include "_slide_o_primeiro_de_seu_nome.njk" %}
+        {% include "_slide_rpg_dnd_timeline.njk" %}
+
+        {% include "_slide_cultura_pop.njk" %}
+
+        <div class="swiper-slide slide-four-cards">
+            <div class="frame"></div>
+            <div data-scene-step="back"></div>
+            <div data-scene-step="2" style="position:absolute;opacity:0;">
+                <div id="startAnimation">startAnimation</div>
+                <div id="stopAnimation">stopAnimation</div>
+            </div>
+            <div data-scene-step="over" ></div>
+            <div class="swiper slide4cardsSwiper">
+                <div class="swiper-wrapper text-dark-bg">
+                    {% include "_slide_intro_4_cards.njk" %}
+                    {% include "_slide_4_cards.njk" %}
+                    {% include "_slide_jogo_de_interpretacao.njk" %}
+                    {% include "_slide_como_entro_no_jogo.njk" %}
+                    {% include "_slide_como_e_essa_aventura.njk" %}
+                    {% include "_slide_o_que_meu_personagem_faz.njk" %}
+                    {% include "_slide_perai_qualquer_coisa_mesmo.njk" %}
+                    {% include "_slide_e_como_vence_o_jogo.njk" %}
+                    {% include "_slide_meu_personagem_vai_ser_poderoso.njk" %}
+                    {% include "_slide_mas_e_se_ele_morrer.njk" %}
+                
+                </div>
+            </div>
+            
+        </div>
+        {% include "_slide_bora_quero_jogar_isso.njk" %}
+        {% include "_slide_exemplo_personagem.njk" %}
+        {% include "_slide_exemplo_ficha.njk" %}
+
+        {% include "_slide_como_uso_essa_ficha.njk" %}
+        {% include "_slide_exemplo_rolagem.njk" %}
+        {% include "_slide_exemplo_rolagem_2.njk" %}
+
+        {% include "_slide_o_que_aprendi_jogando.njk" %}
+        {% include "_slide_rpg_e_marcante.njk" %}
+        {% include "_slide_rpg_e_aprender.njk" %}
+        {% include "_slide_rpg_e_cultura.njk" %}
+        {% include "_slide_rpg_e_socializar.njk" %}
+        {% include "_slide_rpg_e_incluir.njk" %}
+        {% include "_slide_rpg_e_multidisciplinar.njk" %}
+        {% include "_slide_rpg_e_curriculo.njk" %}
+        {% include "_slide_rpg_e_para_todes.njk" %}
+
+        {% include "_slide_beneficios.njk" %}
+        {% include "_slide_espero_que_tenha_gostado.njk" %}
+        {% include "_slide_obrigado.njk" %}
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+<div id="canvas" style="position:absolute;left:0;top:0;display:none;z-index:2" class="sticky top-0"></div>

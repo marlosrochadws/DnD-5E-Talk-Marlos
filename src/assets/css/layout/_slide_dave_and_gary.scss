@@ -1,0 +1,130 @@
+.puppet-stage {
+  height: 100%;
+  width: 100%;
+  background-color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.puppet-show {
+  position: relative;
+  width: 100%;
+  background-image: url("images/BnW-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 40%;
+  }
+
+  .puppet-character {
+    position: absolute;
+    height: auto;
+
+    &.gary {
+      width: 30vw;
+      min-width: 25vh;
+      right: 10%;
+      bottom: -25px;
+      transform: scaleX(-1);
+
+      &.mouth-openned {
+        .head.gary {
+          transform: rotate(-25deg) translatey(-20px);
+          transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .body.gary {
+          transform: translatey(-20px);
+          transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+      }
+    }
+    &.dave {
+      width: 25vw;
+      min-width: 25vh;
+      left: 10%;
+      bottom: -25px;
+      transform: scaleX(-1) translateY(30%);
+      
+
+      &.mouth-openned {
+        .head.dave {
+          transform: rotate(25deg) translatey(-20px);
+          transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .body.dave {
+          transform: translatey(-20px);
+          transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+      }
+    }
+    &::after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+    .head {
+      position: absolute;
+
+      &.gary {
+        width: 41.2%;
+        height: 41.2%;
+        background-image: url('images/garry.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: 30%;
+        left: 21.2%;
+        transform-origin: bottom left;
+        transform: rotate(0deg) translatey(0px);
+        transition: all .3s ease-in-out;
+      }
+
+      &.dave {
+        width: 47.5%;
+        height: 47.5%;
+        background-image: url('images/dave.png');
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        top: -34.8%;
+        left: 28.8%;
+        transform-origin: bottom right;
+        transform: rotate(0deg) translatey(0px);
+        transition: all .3s ease-in-out;
+      }
+    }
+    .body {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &.gary {
+        width: 100%;
+        height: 100%;
+        background-image: url('images/garry_2.png');
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translatey(0px);
+        transition: all .3s ease-in-out;
+      }
+
+      &.dave {
+        width: 100%;
+        height: 100%;
+        background-image: url('images/dave_2.png');
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: translatey(0px);
+        transition: all .3s ease-in-out;
+      }
+    }
+  }
+}

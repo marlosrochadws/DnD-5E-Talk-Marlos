@@ -1,0 +1,5 @@
+(() => {
+
+  var intFrameWidth = window.innerWidth;
+
+})();

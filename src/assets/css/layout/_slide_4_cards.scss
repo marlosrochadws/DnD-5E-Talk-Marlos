@@ -1,0 +1,290 @@
+.slide-four-cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+[data-scene-step="back"] {
+  z-index: -100;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+[data-scene-step="2"] {
+  z-index: 300;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  background-color: blue;
+}
+
+[data-scene-step="over"] {
+  z-index: 100;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.slide4cardsSwiper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  
+  .fade-in-title {
+    color: #ffffff;
+    font-size: 4em;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    grid-gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .fade-up-text {
+    color: #ffffff;
+    font-size: 2em;
+  }
+
+  .swiper-slide {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .swiper-slide.swiper-slide-active {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .cards-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    .card {
+      position: absolute;
+      width: 15%;
+      height: auto;
+      transform: translate(-50%,-50%);
+      transition: all 1s ease;
+
+      &::before {
+        content:'';
+        display: block;
+        padding-bottom: 150%;
+      }
+
+      &.disabled {
+        margin-top: 30px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 1s ease;
+
+        .frame {
+          animation: none;
+        }
+      }
+
+      .frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 7px 2px white;
+        padding: 10px;
+      }
+
+      .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 7px;
+
+        .icon {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          left: 0px;
+          top: 0px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+
+          &.icon-player {
+            background-image: url('images/jogador.svg');
+          }
+          &.icon-gm {
+            background-image: url('images/mestre.svg');
+          }
+          &.icon-adven {
+            background-image: url('images/cenario.svg');
+          }
+          &.icon-book {
+            background-image: url('images/acessorios.svg');
+          }
+        }
+      }
+
+      .text-wrapper {
+        position: absolute;
+        top: 0%;
+        left: 100%;
+        width: 50vw;
+        height: 1px;
+        
+        .text-container {
+          padding: 0 3vw 0 3vw;
+        }
+      }
+    }
+
+    .card-1 {
+      top: 50%;
+      left: 20%;
+
+      &.active {
+        left: 25%;
+      }
+
+      .frame {
+        animation: float1 10s ease-in-out infinite;
+      }
+    }
+    .card-2 {
+      top: 50%;
+      left: 40%;
+
+      &.active {
+        left: 25%;
+      }
+
+      .frame {
+        animation: float2 8s ease-in-out infinite;
+      }
+    }
+    .card-3 {
+      top: 50%;
+      left: 60%;
+
+      &.active {
+        left: 25%;
+      }
+
+      .frame {
+        animation: float3 9s ease-in-out infinite;
+      }
+    }
+    .card-4 {
+      top: 50%;
+      left: 80%;
+
+      &.active {
+        left: 25%;
+      }
+
+      .frame {
+        animation: float4 11s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@keyframes float1 {
+	0% {
+		transform: translate3d(0,0px,0);
+	}
+  25% {
+		transform: translate3d(0,-10px,0);
+	}
+	45% {
+		transform: translate3d(0,0px,0);
+	}
+  68%{
+    transform: translate3d(0,-15px,0);
+  }
+  85%{
+    transform: translate3d(0,10px,0);
+  }
+	100% {
+		transform: translate3d(0,0px,0);
+	}
+}
+@keyframes float2 {
+	0% {
+		transform: translate3d(0,0px,0);
+	}
+  25% {
+		transform: translate3d(0,-10px,0);
+	}
+	45% {
+		transform: translate3d(0,0px,0);
+	}
+  68%{
+    transform: translate3d(0,-15px,0);
+  }
+  85%{
+    transform: translate3d(0,10px,0);
+  }
+	100% {
+		transform: translate3d(0,0px,0);
+	}
+}
+@keyframes float3 {
+	0% {
+		transform: translate3d(0,0px,0);
+	}
+  25% {
+		transform: translate3d(0,-10px,0);
+	}
+	45% {
+		transform: translate3d(0,0px,0);
+	}
+  68%{
+    transform: translate3d(0,-15px,0);
+  }
+  85%{
+    transform: translate3d(0,10px,0);
+  }
+	100% {
+		transform: translate3d(0,0px,0);
+	}
+}
+@keyframes float4 {
+	0% {
+		transform: translate3d(0,0px,0);
+	}
+  25% {
+		transform: translate3d(0,-10px,0);
+	}
+	45% {
+		transform: translate3d(0,0px,0);
+	}
+  68%{
+    transform: translate3d(0,-15px,0);
+  }
+  85%{
+    transform: translate3d(0,10px,0);
+  }
+	100% {
+		transform: translate3d(0,0px,0);
+	}
+}

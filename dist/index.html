@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>D&amp;D Presentation by Marlos</title>
+  <link rel="canonical" href="http://pageurl">
+  <meta property="og:title" content="Site Title">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Site Name">
+  <meta property="og:url" content="http://siteurl.com">
+  <meta charset="utf-8">
+  <meta name="description" content="155 characters or less">
+  <meta name="keywords" content="comma, separated, keywords">
+  <meta name="author" content="Writey McWriterson">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+  
+  <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#5bbad5">
+  
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  </style> 
+  <!-- <link rel="stylesheet" href="/assets/main.css?<%- cacheBust.mainCss %>" /> -->
+  <link rel="stylesheet" href="/assets/main.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/97/three.min.js"></script>
+  
+</head>
+
+<body class="home">
+    
+  <header class="site-header">
+</header>
+    
+  <main id="content" class="content">
+    
+    
+
+    <div id="app" class="swiper mainSwiper background-paper">
+    <div class="dice-menu">
+        <div class="toggle-menu" id="diceMenuTg">DICES</div>
+        <div class="dices-wrapper" id="dicesWrapper">
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d4'])"><img src="/assets/images/d4.svg"><span>D4</span></div>
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d6'])"><img src="/assets/images/d6.svg"><span>D6</span></div>
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d8'])"><img src="/assets/images/d8.svg"><span>D8</span></div>
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d10'])"><img src="/assets/images/d10.svg"><span>D10</span></div>
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d12'])"><img src="/assets/images/d12.svg"><span>D12</span></div>
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d20'])"><img src="/assets/images/d20.svg"><span>D20</span></div>
+            <div class="dice-icon" data-throw-btn v-on:click="throw_dice(['d4','d6','d8','d10','d12','d20'])"><span>ALL</span></div>
+        </div>
+    </div>
+    <div class="swiper-wrapper">
+        
+        
+        <div class="swiper-slide  activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-cover">
+        <span>RPG</span>
+        <span>:</span>
+        <span>Begins!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li><i>v1.0 2023</i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_cover_pb.png');"></div>
+      <img src="/assets/images/_slide_cover.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+    <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>"Veloz</span>
+        <span>e</span>
+        <span>de</span>
+        <span>asas</span>
+        <span>negras</span>
+        <span>como</span>
+        <span>a</span>
+        <span>noite.</span>
+        <span>A</span>
+        <span>sombra</span>
+        <span>do</span>
+        <span><b>dragão</b></span>
+        <span>aparece</span>
+        <span>sobre</span>
+        <span>as</span>
+        <span>nuvens!</span>
+        <br>
+        <span><b>Rolem Iniciativa!</b></span>
+      </h1>
+      <div class="fade-up-text text-default">
+          <ul>
+            <li>Marlos Martins da Rocha</li>
+            <li>Front-End Dev</li>
+            <li>32 anos</li>
+            <li>Mestre há 20 anos</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image grayscale inkmask-right" style="background-image: url('/assets/images/_slide_autor_pb.png');"></div>
+      <img src="/assets/images/_slide_autor.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span><b>Missão</b></span>
+        <span> - </span>
+        <span>Entregue</span>
+        <span>[<b>1</b>]</span>
+        <span>Talk</span>
+        <span>para</span>
+        <span>DWS!</span>
+        
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>"Posso falar algo sobre RPG..."</li>
+          <li>Uma infinidade de temas, para muitas talks.</li>
+          <li>Nem todos jogaram ou até mesmo sabem o que é.</li>
+          <li>Como apresentar esse jogo estranho que eu tanto amo?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_o_desafio_pb.png');"></div>
+      <img src="/assets/images/_slide_o_desafio.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>Hmm,</span>
+        <span>RPG?</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <p>"AAAH! É uma parada pra dor nas costas né?"</p>
+        <br><i><b>R</b>eeducação <b>P</b>ostural <b>G</b>lobal.</i><br>
+
+        <p>"Já sei! <b>R</b>ocket <b>P</b>ropelled <b>G</b>renade, uma bazooka!"</p>
+        <br><i><b>R</b>uchnoy <b>P</b>rotivotankovvy <b>G</b>ranatomyot (Russo para lançador de granada antitanque de mão) <b id="playSound">Ручной противотанковый гранатомет</b></i>
+      </div>
+    </div>
+  </div>
+  
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span><b>R</b>ole</span>
+        <span><b>P</b>laying</span>
+        <span><b>G</b>ame!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <p><b>"Jogo de interpretação de papéis na tradução livre."</b></p>
+        <p>Existem várias formas de RPG. A forma original, às vezes chamada de <b>Tabletop RPG, RPG 'de mesa'</b>, é o jogo em que os jogadores assumem papéis de personagens e criam narrativas colaborativamente.</p>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_a_sigla2_pb.png');"></div>
+      <img src="/assets/images/_slide_a_sigla2.png">
+    </div>
+  </div>
+</div>
+
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>RPGs eletrônicos</span>
+      </h1>
+      <div class="text-default">
+        <ul>
+          <li data-goto-slide='0'>RPG de ação</li>
+          <li data-goto-slide='1'>RPG tático</li>
+          <li data-goto-slide='2'>RPG Monster-Tamer</li>
+          <li data-goto-slide='3'>JRPG</li>
+          <li data-goto-slide='4'>RPG de aventura/mundo aberto</li>
+          <li data-goto-slide='5'>MMORPG</li>
+          <li data-goto-slide='6'>Visual Novel</li>
+          <li data-goto-slide='7'>Roguelike</li>
+          <li data-goto-slide='8'>Soulslike</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="swiper eletronicRPGsSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_rpg_acao.webp">
+            <p>RPG de ação: Horizon Forbidden West, The Legend of Zelda e Cyberpunk 2077</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_rpg_tatico.webp">
+          </div>
+          <p>RPG tático: Final Fantasy Tactics, Fire Emblem: Three Houses e Baldur's Gate III</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_rpg_monster_tamer.webp">
+          </div>
+          <p>RPG Monster-Tamer: Pokémon, Digimon e Monster Hunter Stories</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_jrpg.webp">
+          </div>
+          <p>JRPG: Persona 5, Nier Automata e Chrono Trigger</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_rpg_aventura.webp">
+          </div>
+          <p>RPG de aventura: Breath of the Wild, Skyrim e The Witcher 3</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_mmorpg.webp">
+          </div>
+          <p>MMORPG: Destiny 2, World of Warcraft e Final Fantasy XIV</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_visual_novel.webp">
+          </div>
+          <p>Visual Novel: Fate/Stay Night, Doki Doki Literature Club e Ace Attorney</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_roguelike.webp">
+          </div>
+          <p>Roguelike: Hades, Returnal e Darkest Dungeon</p>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_soulslike.webp">
+          </div>
+          <p>Soulslike: Dark Souls, Nioh e Code Vein</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-right">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span><b>O</b></span>
+        <span><b>primeiro</b></span>
+        <span>de</span>
+        <span>seu</span>
+        <span>nome!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>Don Kaye e Gary Gygax, Tactical Studies Rules - TSR</li>
+          <li>Dave Arneson e Gary Gygax, <b>The Fantasy Game</b></li>
+          <li>Briam Blume, investidor, TSR Hobbies</li>
+          <li>O primeiro RPG do mundo, <b>Dungeons & Dragons</b>, 1974</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-left">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-bottomleft" style="background-image: url('/assets/images/_slide_o_primeiro_de_seu_nome_pb.png');"></div>
+      <img src="/assets/images/_slide_o_primeiro_de_seu_nome.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span><b>Timeline</b></span>
+        <span>do</span>
+        <span>D&D</span>
+      </h1>
+      <div class="text-default timeline-list">
+        <ul>
+          <li data-dnd-slide='0'>1974 – “Original” Dungeons & Dragons</li>
+          <li data-dnd-slide='1'>1977 – Advanced Dungeons & Dragons 1st Edition</li>
+          <li data-dnd-slide='2'>1977 – Dungeons & Dragons Basic Set (no Brasil pela Grow)</li>
+          <li data-dnd-slide='3'>1989 – Advanced Dungeons & Dragons 2nd Edition(no Brasil pela Devir)</li>
+          <li data-dnd-slide='4'>2000 – Dungeons & Dragons 3rd edition (no Brasil pela Devir)</li>
+          <li data-dnd-slide='5'>2003 – Dungeons & Dragons 3rd edition Revised (3.5) (no Brasil pela Devir)</li>
+          <li data-dnd-slide='6'>2008 – Dungeons & Dragons 4th edition (no Brasil pela Devir)</li>
+          <li data-dnd-slide='7'>2014 – Dungeons & Dragons 5th edition (no Brasil pela Galápagos Jogos)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="swiper dndTimelineSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_timeline_1.webp">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_timeline_2.webp">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_timeline_3.jpeg">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_timeline_4.jpeg">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_timeline_5.jpeg">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_timeline_6.jpeg">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_timeline_7.jpg">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="image-container">
+            <img src="/assets/images/_slide_timeline_8.jpeg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-right">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>Ícone</span>
+        <span>da</span>
+        <span><b>Cultura</b></span>
+        <span><b>Pop!</b></span>
+        
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>No popular, passatempo típico de "<b>nerds</b>" e adolescentes</li>
+          <li>No cinema, <b>E.T.</b> (quando Elliot aparece querendo ser o <b>Mestre</b>)</li>
+          <li>Em breve nos cinemas, <b>Dungeons & Dragons: Honra entre Rebeldes</b>"</li>
+          <li>Na TV, série animada <b>Caverna do Dragão</b> (<b>Dungeons & Dragons</b> no original)</li>
+          <li>Em séries como <b>Stranger Things</b> e <b>The Big Bang Theory</b></li>
+          <li>Vilões memoráveis como <b>Vecna</b> ou <b>Strahd Von Zarovich</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-left">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-bottomleft" style="background-image: url('/assets/images/_slide_cultura_pop_pb.png');"></div>
+      <img src="/assets/images/_slide_cultura_pop.png">
+    </div>
+  </div>
+</div>
+
+        <div class="swiper-slide slide-four-cards">
+            <div class="frame"></div>
+            <div data-scene-step="back"></div>
+            <div data-scene-step="2" style="position:absolute;opacity:0;">
+                <div id="startAnimation">startAnimation</div>
+                <div id="stopAnimation">stopAnimation</div>
+            </div>
+            <div data-scene-step="over" ></div>
+            <div class="swiper slide4cardsSwiper">
+                <div class="swiper-wrapper text-dark-bg">
+                    <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title">
+        <span>Como</span>
+        <span>se</span>
+        <span>define</span>
+        <span>o</span>
+        <span>D&D</span>
+      </h1>
+      <div class="fade-up-text">
+          <ul>
+            <li>IMAGINE: um mundo mundo de guerreiros audazes, magos poderosos e monstros terríveis. Ruínas ancestrais, cavernas profundas e grandes vastidões selvagens.</li>
+            <li>O que difere uma aventura de Dungeons & Dragons de todos os outros jogos ja vistos?</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div> 
+                    <div class="swiper-slide activated-by-key">
+  <div class="cards-container">
+    <div class="card card-1" data-four-card>
+        <div class="frame">
+          <div class="content">
+              <div class="icon icon-player"></div>
+          </div>
+        </div>
+        <div class="text-wrapper">
+          <div class="text-container">
+              <h1 class="fade-in-title">
+                <span>Os</span>
+                <span>Personagens</span>
+                <span>dos</span>
+                <span>Jogadores</span>
+              </h1>
+              <div class="fade-up-text">
+                <ul>
+                  <li>Cada jogo é composto de um ou mais jogadores.</li>
+                  <li>Como jogador, você controlará um personagem, um dos protagonistas da narrativa.</li>
+                  <li>O jogador, tem controle sobre as decisões, personalidade, motivações e objetivos do personagem.</li>
+                </ul>
+              </div>
+          </div>              
+        </div>
+    </div>
+    <div class="card card-2" data-four-card>
+        <div class="frame">
+          <div class="content">
+              <div class="icon icon-gm"></div>
+          </div>
+        </div>
+        <div class="text-wrapper">
+          <div class="text-container">
+              <h1 class="fade-in-title">
+                <span>O</span>
+                <span>Mestre</span>
+                <span>de</span>
+                <span>Jogo</span>
+              </h1>
+              <div class="fade-up-text">
+                <ul>
+                  <li>Cada jogo é composto de um único mestre.</li>
+                  <li>Narrador: define o transcorrer das ações e apresenta os desafios.</li>
+                  <li>Criador de Aventuras: É a engrenagem que torna o RPG infinitamente flexível.</li>
+                  <li>Árbitro: Decide como aplicar as regras e resolver conflitos.</li>
+                  <li>É importante ter um bom conhecimento sobre as regras do jogo.</li>
+                </ul>
+              </div>
+          </div>              
+        </div>
+    </div>
+    <div class="card card-3" data-four-card>
+        <div class="frame">
+          <div class="content">
+              <div class="icon icon-adven"></div>
+          </div>
+        </div>
+        <div class="text-wrapper">
+          <div class="text-container">
+              <h1 class="fade-in-title">
+                <span>A</span>
+                <span>Aventura</span>
+              </h1>
+              <div class="fade-up-text">
+                <ul>
+                  <li>A aventura é como um arco de história em uma série.</li>
+                  <li>Tematica: Fantasia Medieval</li>
+                  <li>Aventuras cheias de ação, combate, mistérios, magias, desafios e monstros.</li>
+                  <li>Prontas para jogar ou Artesanais</li>
+                  <li>Uma Campanha, muitas aventuras.</li>
+                </ul>
+              </div>
+          </div>              
+        </div>
+    </div>
+    <div class="card card-4" data-four-card>
+        <div class="frame">
+          <div class="content">
+              <div class="icon icon-book"></div>
+          </div>
+        </div>
+        <div class="text-wrapper">
+          <div class="text-container">
+              <h1 class="fade-in-title">
+                <span>Livros</span>
+                <span>e</span>
+                <span>Acessórios</span>
+                <span>de</span>
+                <span>Jogo</span>
+              </h1>
+              <div class="fade-up-text">
+                <ul>
+                  <li>Livro do Jogador, do Mestre e dos Monstros</li>
+                  <li>Dados de jogo: O conjunto dos 6 poliédros<sup>*</sup></li>
+                  <li>Ficha de Personagem.</li>
+                  <li>Opicionais: Miniaturas, Matriz e Masmorras Montáveis</li>
+                </ul>
+              </div>
+          </div>              
+        </div>
+    </div>
+  </div>
+</div>
+                    <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title">
+        <span>Jogo</span>
+        <span>de</span>
+        <span>interpretação?</span>
+      </h1>
+      <div class="fade-up-text">
+          <ul>
+            <li>Brincadeira de faz-de-conta</li>
+            <li>Forma e estrutura definidas</li>
+            <li>Histórias mais coerentes</li>
+            <li>Infinitas possibilidades</li>
+            <li>Trabalho conjunto</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image grayscale inkmask-right" style="background-image: url('/assets/images/_slide_jogo_de_interpretacao_pb.png');"></div>
+      <img src="/assets/images/_slide_jogo_de_interpretacao.png">
+    </div>
+  </div>
+</div>
+                    <div class="swiper-slide activated-by-key">
+  <div class="content content-right">
+    <div class="fade-container">
+      <h1 class="fade-in-title">
+        <span>Como</span>
+        <span>eu</span>
+        <span>entro</span>
+        <span>nesse</span>
+        <span>jogo?</span>
+      </h1>
+      <div class="fade-up-text">
+          <ul>
+            <li>"Preciso me vestir de preto?"</li>
+            <li>"Rituais de Magia? É um culto?"</li>
+            <li>"Vou precisar comprar esses livros caros?"</li>
+            <li>"Preciso ir na casa do fulano pra jogar?"</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-left">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image grayscale inkmask-bottomleft" style="background-image: url('/assets/images/_slide_como_entro_no_jogo_pb.png');"></div>
+      <img src="/assets/images/_slide_como_entro_no_jogo.png">
+    </div>
+  </div>
+</div>
+                    <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title">
+        <span>E</span>
+        <span>como</span>
+        <span>é</span>
+        <span>essa</span>
+        <span>aventura</span>
+        <span>de</span>
+        <span>D&D?</span>
+      </h1>
+      <div class="fade-up-text">
+          <ul>
+            <li>A aventura é o coração de D&D.</li>
+            <li>Início: "onde estou e quem é você?"</li>
+            <li>Meio: Masmorras, Florestas, Enigmas, Tesouros, monstros fantásticos...</li>
+            <li>Final: Qualquer coisa é possível, até mudar o final oficial.</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image grayscale inkmask-right" style="background-image: url('/assets/images/_slide_como_e_essa_aventura_pb.png');"></div>
+      <img src="/assets/images/_slide_como_e_essa_aventura.png">
+    </div>
+  </div>
+</div>
+                    <div class="swiper-slide activated-by-key">
+  <div class="content content-right">
+    <div class="fade-container">
+      <h1 class="fade-in-title">
+        <span>O</span>
+        <span>que</span>
+        <span>meu</span>
+        <span>personagem</span>
+        <span>vai</span>
+        <span>fazer?</span>
+      </h1>
+      <div class="fade-up-text">
+          <ul>
+            <li>O limite do RPG é a sua imaginação</li>
+            <li>Liberdade nas decisões</li>
+            <li>Confiar? Atacar? Negociar? Você escolhe!</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-left">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image grayscale inkmask-bottomleft" style="background-image: url('/assets/images/_slide_o_que_meu_personagem_faz_pb.png');"></div>
+      <img src="/assets/images/_slide_o_que_meu_personagem_faz.png">
+    </div>
+  </div>
+</div>
+                    <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title">
+        <span>Peraí.</span>
+        <span>Qualquer</span>
+        <span>coisa</span>
+        <span>mesmo?</span>
+      </h1>
+      <div class="fade-up-text">
+          <ul>
+            <li>"Um dragão? Hmmm..."</li>
+            <li>"Invadir um palácio?"</li>
+            <li>Vá em frente e faça uma tentativa.</li>
+            <li>Sucessos e fracassos espetaculares</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image grayscale inkmask-right" style="background-image: url('/assets/images/_slide_perai_qualquer_coisa_mesmo_pb.png');"></div>
+      <img src="/assets/images/_slide_perai_qualquer_coisa_mesmo.png">
+    </div>
+  </div>
+</div>
+                    <div class="swiper-slide activated-by-key">
+  <div class="content content-right">
+    <div class="fade-container">
+      <h1 class="fade-in-title">
+        <span>E</span>
+        <span>como</span>
+        <span>meu</span>
+        <span>personagem</span>
+        <span>vence</span>
+        <span>o</span>
+        <span>jogo?</span>
+      </h1>
+      <div class="fade-up-text">
+          <ul>
+            <li>Objetivo principal: divirta-se!</li>
+            <li>Aventuras acabam, mas a Campanha pode continuar</li>
+            <li>A história sempre estará lá</li>
+            <li>As memórias são conjuntas</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-left">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image grayscale inkmask-bottomleft" style="background-image: url('/assets/images/_slide_e_como_vence_o_jogo_pb.png');"></div>
+      <img src="/assets/images/_slide_e_como_vence_o_jogo.png">
+    </div>
+  </div>
+</div>
+                    <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title">
+        <span>Meu</span>
+        <span>personagem</span>
+        <span>vai</span>
+        <span>ser</span>
+        <span>poderoso?</span>
+      </h1>
+      <div class="fade-up-text">
+          <ul>
+            <li>O personagem evolui e aprende</li>
+            <li>Novos recursos</li>
+            <li>Novas habilidades</li>
+            <li>Mais experiências = Mais níveis</li>
+            <li>Alinhamento com o mestre</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image grayscale inkmask-right" style="background-image: url('/assets/images/_slide_meu_personagem_vai_ser_poderoso_pb.png');"></div>
+      <img src="/assets/images/_slide_meu_personagem_vai_ser_poderoso.png">
+    </div>
+  </div>
+</div>
+                    <div class="swiper-slide activated-by-key">
+  <div class="content content-right">
+    <div class="fade-container">
+      <h1 class="fade-in-title">
+        <span>Mas</span>
+        <span>e</span>
+        <span>se</span>
+        <span>o</span>
+        <span>personagem</span>
+        <span>morrer?</span>
+      </h1>
+      <div class="fade-up-text">
+          <ul>
+            <li>O risco existe...</li>
+            <li>E soluções também!</li>
+            <li>Ninguém "perde" o jogo.</li>
+            <li>Ajudou com uma grande história</li>
+            <li>"Para sempre lembraremos..."</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-left">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image grayscale inkmask-bottomleft" style="background-image: url('/assets/images/_slide_mas_e_se_ele_morrer_pb.png');"></div>
+      <img src="/assets/images/_slide_mas_e_se_ele_morrer.png">
+    </div>
+  </div>
+</div>
+                
+                </div>
+            </div>
+            
+        </div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>"Bora</span>
+        <span>jogar</span>
+        <span>então!"</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>"Onde encontro um grupo?"</li>
+          <li>"Vou ser o que? Mestre ou jogador?"</li>
+          <li>"Preciso levar o que?"</li>
+          <li>"Tenho que estudar tudo?"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_bora_jogar_entao_pb.png');"></div>
+      <img src="/assets/images/_slide_bora_jogar_entao.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>Criação de personagem</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>Alinhamento com o grupo: material, dificuldade, "clima" da aventura</li>
+          <li>Acompanhamento com o Mestre: Pergunte!</li>
+          <li>Raças: quais disponíveis?</li>
+          <li>Classes: diversão vs utilidade</li>
+          <li>Backround: tem seus benefícios</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_exemplo_personagem_pb.png');"></div>
+      <img src="/assets/images/_slide_exemplo_personagem.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-right">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>A</span>
+        <span>infame</span>
+        <span>ficha</span>
+        <span>de</span>
+        <span>personagem</span>
+      </h1>
+      <div class="fade-up-text text-default">
+          <ul>
+            <li>"É pra completar tudo isso?!"</li>
+            <li>Você não estará sozinho.</li>
+            <li>Não existe "ficha perfeita".</li>
+            <li>"Tem opções demais. Não sei o que escolher."</li>
+            <li>"Desenhar? Serve boneco de palito?"</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-left">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-bottomleft" style="background-image: url('/assets/images/_slide_ficha_pb.png');"></div>
+      <img src="/assets/images/_slide_ficha.png">
+    </div>
+  </div>
+</div>
+
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>"Como</span>
+        <span>uso</span>
+        <span>esta</span>
+        <span>ficha?"</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>Apadrinhamento no RPG</li>
+          <li>Estude a sua ficha o quanto puder</li>
+          <li>A ficha é como um diário</li>
+          <li>"Opa, falei o valor errado!"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_como_uso_essa_ficha_pb.png');"></div>
+      <img src="/assets/images/_slide_como_uso_essa_ficha.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>Exemplo</span>
+        <span>de</span>
+        <span>rolagem</span>
+      </h1>
+      <div class="fade-up-text text-small">
+        <p><i>"Você é <b>Kayla</b>, uma <b>patrulheira</b> do reino que acaba de voltar de uma aventura em terras distantes.</i></p>
+        <p><i>No início do que seria seu último dia de viajem até o reino, já visivel ao fundo, você se depara com um <b>estranho em seu caminho</b>. O homem usa um tapa-olho e veste roupas de peles e couro.</i></p>
+        <p><i>Ele ainda não viu você, parece distraído com um saco de moedas que ele brinca de jogar para cima enquanto assobia uma canção.</i></p>
+        <p><i>Vendo melhor agora, você se lembra de ter visto o rosto dele nos cartazes de procurado."</i></p>
+      </div>
+    </div>
+
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/bgcastle_pb.png');"></div>
+      <img src="/assets/images/bgcastle.png">
+    </div>
+  </div>
+
+</div>
+        <div class="swiper-slide activated-by-key">
+  
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>"O</span>
+        <span>que</span>
+        <span>você</span>
+        <span>deseja</span>
+        <span>fazer?"</span>
+      </h1>
+      <div class="fade-up-text text-small">
+        <ul>
+          <li>"Quero <b>observar</b> bem o local, talvez ele não esteja sozinho." <span data-popup-roll="perception">[<b>PERCEPÇÃO</b>]</span></li>
+          <li>"Vou esconder uma <b>armadilha de urso</b> no caminho dele." <span data-popup-roll="survival">[<b>SOBREVIVÊNCIA</b>]</span></li>
+          <li>"Não quero arriscar, vou tentar passar <b>furtivamente</b>." <span data-popup-roll="stealth">[<b>FURTIVIDADE</b>]</span></li>
+          <li>"Quero a recompensa! Vou <b>atacar</b> com meu <b>arco e flecha</b>!" <span data-popup-roll="attack">[<b>ATAQUE</b>]+</span><span data-popup-roll="damage">[<b>DANO</b>]</span></li>
+          <li>"Eu vou lá <b>falar</b> com ele!"</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <img src="/assets/images/bgcastle.png">
+    </div>
+  </div>
+
+  <div class='popup-overlay'></div>
+  <div class='popup-test'>
+    <div class='close-popup' data-close-popup>×</div>
+    <div class='player-wrapper'>
+      <div class='arabesco-top'></div>
+      <div class='char-wrapper'>
+        <div class="char-circle">
+          <div class='image-circle' data-player-pic="normal"></div>
+        </div>
+
+        <div class="test-difficulty">  
+          <div class="test-difficulty-label" data-difficulty-label>Classe de Dificuldade</div>
+          <div class="test-difficulty-class" data-difficulty-class>10</div>
+        </div>
+
+        <div class="char-values">
+          <div class="char-att" data-roll="perception"> 
+            <div class="att-icon"><img src="/assets/images/eye_1.svg"></div>
+            <div class="att-label">Percepção</div>
+            <div class="att-value" data-bonus>4</div>
+          </div>
+          <div class="char-att" data-roll="survival"> 
+            <div class="att-icon"><img src="/assets/images/Torch.svg"></div>
+            <div class="att-label">Sobrevivência</div>
+            <div class="att-value" data-bonus>3</div>
+          </div>
+          <div class="char-att" data-roll="stealth"> 
+            <div class="att-icon"><img src="/assets/images/eye_2.svg"></div>
+            <div class="att-label">Furtividade</div>
+            <div class="att-value" data-bonus>5</div>
+          </div>
+          <div class="char-att" data-roll="attack"> 
+            <div class="att-icon"><img src="/assets/images/Target.svg"></div>
+            <div class="att-label">Ataque</div>
+            <div class="att-value" data-bonus>5</div>
+          </div>
+          <div class="char-att" data-roll="damage"> 
+            <div class="att-icon"><img src="/assets/images/Bow.svg"></div>
+            <div class="att-label">Bônus de Dano</div>
+            <div class="att-value" data-bonus>5</div>
+          </div>
+          <div class="plus-sign">+</div>
+          <div class="char-att" data-roll="d8"> 
+            <div class="att-icon" data-throw-btn v-on:click="throw_dice(['d8'])"><img src="/assets/images/d8.svg"></div>
+            <div class="att-label">D8</div>
+            <div class="att-value" data-throw-result>{{result}}</div>
+          </div>
+          <div class="char-att" data-roll="d20"> 
+            <div class="att-icon" data-throw-btn v-on:click="throw_dice(['d20'])"><img src="/assets/images/d20.svg"></div>
+            <div class="att-label">D20</div>
+            <div class="att-value" data-throw-result>{{result}}</div>
+          </div>
+        </div>
+
+        <div class="test-result"> 
+          <div class="result-value" data-result-value></div>
+          <div class="result" data-critical-failure>Falha Crítica</div> 
+          <div class="result" data-failure>Falhou</div> 
+          <div class="result" data-success>Sucesso</div> 
+          <div class="result" data-critical-success>Sucesso Crítico</div> 
+        </div>
+      </div>
+      <div class='arabesco-bottom'></div>
+    </div>
+
+    <div class='enemy-wrapper'>
+      <div class='arabesco-top'></div>
+      <div class='char-wrapper'>
+        <div class="char-circle">
+          <div class='image-circle' data-enemy-pic="normal"></div>
+        </div>
+
+        <div class="test-wrapper test-saving">  
+          <div class="test-icon"><img src="/assets/images/eye_1.svg"></div>
+          <div class="test-label">Percepção Passiva</div>
+          <div class="test-value" data-saving-throw>12</div>
+        </div>
+
+        <div class="test-wrapper test-armor">  
+          <div class="test-icon"><img src="/assets/images/ShieldAC.svg"></div>
+          <div class="test-label">Classe de Armadura</div>
+          <div class="test-value" data-armor-class>14</div>
+        </div>
+
+      </div>
+      <div class='arabesco-bottom'></div>
+    </div>
+  </div>
+
+</div>
+
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>As</span>
+        <span>8</span>
+        <span>coisas</span>
+        <span>que</span>
+        <span>aprendi</span>
+      </h1>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_as_coisas_que_aprendi_pb.png');"></div>
+      <img src="/assets/images/_slide_as_coisas_que_aprendi.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>RPG</span>
+        <span>é</span>
+        <span>marcante!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>2001 me chamaram para brincar</li>
+          <li>Defensores de Tóquio</li>
+          <li>As armadilhas de um mestre psicopata</li>
+          <li>Péssima primeira impressão</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_rpg_e_marcante_pb.png');"></div>
+      <img src="/assets/images/_slide_rpg_e_marcante.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-right">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>RPG</span>
+        <span>é</span>
+        <span>aprender!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>2003 foi quando comprei o Manual 3D&T</li>
+          <li>Do nada, meu primeiro jogo surgiu</li>
+          <li>Nenhuma noção do que eu estava fazendo</li>
+          <li>Ótima primeira impressão, pros outros</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-left">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-bottomleft" style="background-image: url('/assets/images/_slide_rpg_e_aprender_pb.png');"></div>
+      <img src="/assets/images/_slide_rpg_e_aprender.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>RPG</span>
+        <span>é</span>
+        <span>cultura!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>"O guri que sempre vem aqui." - TJ</li>
+          <li>Revista Dragão Brasil e as Dicas de Mestre</li>
+          <li>Harry Potter</li>
+          <li>Fiz propaganda e nem percebi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_rpg_e_cultura_pb.png');"></div>
+      <img src="/assets/images/_slide_rpg_e_cultura.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-right">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>RPG</span>
+        <span>é</span>
+        <span>socializar!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>Fofoca boa!</li>
+          <li>A primeira barreira é o preconceito</li>
+          <li>Primeiro grupo de RPG da cidade</li>
+          <li>5 anos de aventuras</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-left">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-bottomleft" style="background-image: url('/assets/images/_slide_rpg_e_socializar_pb.png');"></div>
+      <img src="/assets/images/_slide_rpg_e_socializar.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>RPG</span>
+        <span>é</span>
+        <span>incluir!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>2005 me mudei novamente, Pelotas</li>
+          <li>Novo lugar, novos colegas e nada de RPG</li>
+          <li>O desenhista de poucas palavras</li>
+          <li>Os hobbies como ponte entre pessoas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_rpg_e_incluir_pb.png');"></div>
+      <img src="/assets/images/_slide_rpg_e_incluir.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-right">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>RPG</span>
+        <span>é</span>
+        <span>multidisciplinar!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>2010 eu resolvi que diria 'sim'</li>
+          <li>Tenho TCC, G3PD, DA, DCE, mas eu quero é D&D!</li>
+          <li>Ou é compromisso ou não vai rolar...</li>
+          <li>E rolou!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-left">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-bottomleft" style="background-image: url('/assets/images/_slide_rpg_e_multidisciplinar_pb.png');"></div>
+      <img src="/assets/images/_slide_rpg_e_multidisciplinar.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>RPG</span>
+        <span>é</span>
+        <span>currículo!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>"erh... e também jogo RPG"</li>
+          <li>Meu primeiro grupo dentro do trabalho</li>
+          <li>Ser chefe não te dá XP</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_rpg_e_curriculo_pb.png');"></div>
+      <img src="/assets/images/_slide_rpg_e_curriculo.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-right">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>RPG</span>
+        <span>é</span>
+        <span>para</span>
+        <span>todes!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>Grupo atual</li>
+          <li>Superando minhas limitações e receios</li>
+          <li>Ajudando os outros a superarem também!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-left">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-bottomleft" style="background-image: url('/assets/images/_slide_rpg_e_para_todes_pb.png');"></div>
+      <img src="/assets/images/_slide_rpg_e_para_todes.png">
+    </div>
+  </div>
+</div>
+
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>Porque</span>
+        <span>devo</span>
+        <span>Jogar?</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>Socializar, criatividade, empatia, aprendizado, trabalho em equipe...</li>
+          <li>Parece uma festinha com os amigos.</li>
+          <li>Quando lembramos parece que vivemos aquilo.</li>
+          <li>Escapar dos problemas desse mundo.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_beneficios_pb.png');"></div>
+      <img src="/assets/images/_slide_beneficios.png">
+    </div>
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-right">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>Espero</span>
+        <span>que</span>
+        <span>tenham</span>
+        <span>gostado!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>Eleventy for static site generation</li>
+          <li>Nunjucks which is the default templating engine for Eleventy</li>
+          <li>Sass for writing CSS</li>
+          <li>TailwindCSS for atomic classes in HTML</li>
+          <li>Webpack for compiling the Sass and JavaScript assets</li>
+          <li>Three.js for the Fog and Dice animations</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-left">
+
+  </div>
+</div>
+        <div class="swiper-slide activated-by-key">
+  <div class="content content-left">
+    <div class="fade-container">
+      <h1 class="fade-in-title title-default">
+        <span>Obrigado!</span>
+      </h1>
+      <div class="fade-up-text text-default">
+        <ul>
+          <li>Perguntas?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="image-center-right">
+    <div class="inkmask-container">
+      <div class="inkmask-color-image inkmask-right" style="background-image: url('/assets/images/_slide_as_coisas_que_aprendi_pb.png');"></div>
+      <img src="/assets/images/_slide_as_coisas_que_aprendi.png">
+    </div>
+  </div>
+</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+<div id="canvas" style="position:absolute;left:0;top:0;display:none;z-index:2" class="sticky top-0"></div>
+    
+  </main>
+
+  <footer class="footer">
+</footer>
+  
+<script src="/assets/vendor.js"></script>
+<script src="./assets/vue3.js"></script>
+<script src="./assets/chart.js" ></script>
+<script src="./assets/three.js"></script>
+<script src="./assets/cannon.js"></script>
+<script src="./assets/dice.js"></script>
+<script src="/assets/main.js"></script>
+
+
+
+
+</body>
+</html>

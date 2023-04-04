@@ -1,0 +1,23 @@
+// Responsive breakpoint mixins
+
+@mixin for-mobile-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-sm-tablet-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-lg-tablet-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-sm-desktop-up {
+  @media (min-width: 1150px) { @content; }
+}
+@mixin for-med-desktop-up {
+  @media (min-width: 1250px) { @content; }
+}
+@mixin for-lg-desktop-up {
+  @media (min-width: 1400px) { @content; }
+}
+@mixin for-xlg-desktop-up {
+  @media (min-width: 1700px) { @content; }
+}

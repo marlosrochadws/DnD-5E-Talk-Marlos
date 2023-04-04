@@ -1,0 +1,92 @@
+.swiper.mainSwiper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.background-paper {
+  background-image: url('/assets/images/background-paper.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.swiper-slide {
+  position: relative;
+  overflow: hidden;
+
+  
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 6vh;
+  }
+
+  .content-top {
+    position: absolute;
+    width: 90%;
+    height: 40%;
+    right: 5%;
+    top: 5%;
+  }
+  .content-left {
+    position: absolute;
+    width: 45%;
+    height: auto;
+    max-width: 900px;
+    right: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .content-right {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    max-width: 900px;
+    left: 55%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .image-center-right {
+    position: absolute;
+    width: 40%;
+    max-width: 900px;
+    height: 100%;
+    left: 55%;
+    top: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .image-center-left {
+    position: absolute;
+    width: 40%;
+    max-width: 900px;
+    height: 100%;
+    right: 55%;
+    top: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .image-bottom-center {
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    left: 5%;
+    top: 45%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  h1 {
+    font-family: 'Optialthea';
+  }
+}
